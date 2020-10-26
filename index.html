@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="css/main.css">
+        <title>POST-lomake</title>
+    </head>
+    <body>
+        <nav>
+            <img src="images/dvv_logo.png" width="280" height="40">
+            <ul>
+                <li><a href="#" class="selected">Lomake</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div id="error"></div>
+
+            <section>
+                <h1>Viestin lähetys</h1>
+                <form id="messageForm" action="https://viestilomake.qa.suomi.fi/form" method="POST">
+                    <input type="hidden" name="ViranomaisTunnus" value="example">
+                    <input type="hidden" name="PalveluTunnus" value="example">
+                    <input type="hidden" name="ViranomaisenEmail" value="blaah@example.com">
+                    <input type="hidden" name="Paluuosoite" value="https://dvv.fi/">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Otsikko</td>
+                                <td><input type="text" name="Nimeke"></td>
+                            </tr>
+                            <tr>
+                                <td>Viesti</td>
+                                <td><textarea name="Kuvausteksti" rows="5"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td>Liitetiedostot</td>
+                                <td><div id="attachments" class="attachments">Pudota liitetiedostot tähän.</div></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <input type="submit" value="Lähetä">
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; Digi- ja väestötietovirasto</p>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
